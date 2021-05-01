@@ -15,7 +15,7 @@
                         <div class="form-group">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" name="q"
-                                    placeholder="cari berdasarkan no.invoice">
+                                    placeholder="cari berdasarkan nomor invoice">
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-primary">
                                         <i class="fa fa-search"></i> CARI
