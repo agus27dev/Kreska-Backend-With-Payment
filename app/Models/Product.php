@@ -2,12 +2,21 @@
 
 namespace App\Models;
 
+use Brick\Math\BigInteger;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'category_id'  =>   'unsignedBigInteger',
+        'weight'       =>   'bigInteger',
+        'price'        =>   'bigInteger',
+        'discount'     =>   'integer',
+        'stock'        =>   'integer',
+    ];
 
     protected $fillable = [
         'image', 'title', 'slug', 'category_id', 'content', 'weight',
