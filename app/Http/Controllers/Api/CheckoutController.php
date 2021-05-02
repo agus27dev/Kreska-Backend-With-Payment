@@ -167,6 +167,18 @@ class CheckoutController extends Controller
                 'status' => 'success'
             ]);
 
+            //update stock
+
+            foreach($data_transaction->order()->get() as $order){
+
+                $product = $order->product->first();
+
+                $product->update([
+                    'stock' => $product->stock - $order->qty
+                ]);
+
+            };
+
         } elseif($transaction == 'pending'){
 
             /**
