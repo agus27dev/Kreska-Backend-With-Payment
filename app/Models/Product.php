@@ -11,9 +11,9 @@ class Product extends Model
     use HasFactory;
 
     protected $casts = [
-        'category_id'  =>   'Integer',
-        'weight'       =>   'Integer',
-        'price'        =>   'Integer',
+        'category_id'  =>   'integer',
+        'weight'       =>   'integer',
+        'price'        =>   'integer',
         'discount'     =>   'integer',
         'stock'        =>   'integer',
     ];
