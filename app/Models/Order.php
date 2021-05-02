@@ -9,6 +9,13 @@ class Order extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'invoice_id'    => 'integer',
+        'product_id'    => 'integer',
+        'qty'           => 'integer',
+        'price'         => 'integer',
+    ];
+
     protected $fillable = [
         'invoice_id', 'invoice', 'product_id', 'product_name', 'image',
         'qty', 'price'

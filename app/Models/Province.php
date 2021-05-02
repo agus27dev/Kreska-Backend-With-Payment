@@ -9,6 +9,10 @@ class Province extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'province_id'   => 'integer',
+    ];
+
     protected $fillable = [
         'province_id', 'name'
     ];
