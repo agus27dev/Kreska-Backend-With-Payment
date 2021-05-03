@@ -173,7 +173,7 @@ class CheckoutController extends Controller
                 $product = App\Models\Product::whereId($order->product_id)->first();
 
                 $product->update([
-                    'stok' => $product->stock - $order->qty
+                    'stock' => $product->stock - $order->qty
                 ]);
 
             }
