@@ -170,7 +170,7 @@ class CheckoutController extends Controller
             //update stock
             foreach($data_transaction->order()->get() as $order) {
 
-                $product = App\Models\Product::whereId($order->product_id)->first();
+                $product = \App\Models\Product::whereId($order->product_id)->first();
 
                 $product->update([
                     'stock' => $product->stock - $order->qty
