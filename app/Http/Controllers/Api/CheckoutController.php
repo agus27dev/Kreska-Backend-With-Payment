@@ -168,7 +168,7 @@ class CheckoutController extends Controller
             ]);
 
             //update stock
-            foreach($data_transaction->order()->get() as $order) {
+            foreach($data_transaction->orders()->get() as $order) {
 
                 $product = \App\Models\Product::whereId($order->product_id)->first();
 
