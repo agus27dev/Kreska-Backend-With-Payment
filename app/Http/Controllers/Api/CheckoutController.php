@@ -168,16 +168,15 @@ class CheckoutController extends Controller
             ]);
 
             //update stock
+            foreach($data_transaction->order()->get() as $order) {
 
-            foreach($data_transaction->order()->get() as $order){
-
-                $product = $order->product->first();
+                $product = App\Models\Product::whereId($order->product_id)->first();
 
                 $product->update([
-                    'stock' => $product->stock - $order->qty
+                    'stok' => $product->stock - $order->qty
                 ]);
 
-            };
+            }
 
         } elseif($transaction == 'pending'){
 
