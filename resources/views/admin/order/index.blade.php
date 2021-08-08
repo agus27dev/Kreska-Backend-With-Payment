@@ -30,6 +30,7 @@
                                 <tr>
                                     <th scope="col" style="text-align: center; width: 6%">NO.</th>
                                     <th scope="col">NO. INVOICE</th>
+                                    <th scope="col">NO. RESI</th>
                                     <th scope="col">NAMA LENGKAP</th>
                                     <th scope="col">GRAND TOTAL</th>
                                     <th scope="col">STATUS</th>
@@ -41,6 +42,7 @@
                                 <tr>
                                     <th scope="row" style="text-align: center">{{ ++$no + ($invoices->currentPage()-1) * $invoices->perPage() }}</th>
                                     <td>{{ $invoice->invoice }}</td>
+                                    <td>{{ $invoice->no_resi }}</td>
                                     <td>{{ $invoice->name }}</td>
                                     <td>{{moneyFormat($invoice->grand_total) }}</td>
                                     <td class="text-center">{{$invoice->status }}</td>
