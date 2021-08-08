@@ -15,7 +15,7 @@
                         @csrf
                         @method('PUT')
                         <div class="form-group">
-                            <label>NAMA PRODUK</label>
+                            <label>TAMBAH NO RESI</label>
                             <input type="text" name="no_resi" value="{{ old('no_resi', $invoice->no_resi) }}"
                                 placeholder="Masukkan No Resi"
                                 class="form-control @error('no_resi') is-invalid @enderror">
